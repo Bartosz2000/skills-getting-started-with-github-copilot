@@ -25,6 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("dark-mode");
   }
 
+  // Add CSS for dark mode
+  const style = document.createElement("style");
+  style.textContent = `
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+  `;
+  document.head.appendChild(style);
+
   // Function to fetch activities from API
   async function fetchActivities() {
     try {
